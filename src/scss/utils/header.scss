@@ -1,0 +1,94 @@
+.header {
+    background-color: $white;
+    &__container {
+
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    &__logo {
+        font-size: 30px;
+        font-weight: 700;
+        background-color: $white;
+        color: $green-light;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__menu-item {
+        font-size: 18px;
+        font-weight: 700;
+        color: $green-light;
+        background-color: $white;
+        
+        &_movies {
+            
+        }
+
+        &_series {
+            
+        }
+
+        &_tv-shows {
+            
+        }
+
+        &_actors {
+            
+        }
+    }
+
+    &__settings-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__form-box {
+        display: flex;
+        gap: 10px;
+        width: 370px;
+        background-color: $green-light;
+        padding: 7px 10px 7px 20px;
+        border-radius: 15px;
+    }
+
+
+    &__form-input {
+        width: 75%;
+        background-color: $green-light;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+    }
+
+    &__form-btn {
+        width: 25%;
+        background-color: $white;
+        padding: 8px 14px;
+        border-radius: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+        color: $green-light;
+    }
+
+    &__switch-btn {
+        background-color: $green-opactity;
+        padding: 5px 10px;
+        border-radius: 15px;
+
+        font-size: 16px;
+        font-weight: 700;
+        color: $white;
+    }
+}

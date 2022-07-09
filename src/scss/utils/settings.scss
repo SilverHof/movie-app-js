@@ -1,0 +1,16 @@
+body {
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    background-color: $white;
+    color: $black;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.active {
+    color: rgb(185, 0, 0);
+}
