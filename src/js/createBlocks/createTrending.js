@@ -39,7 +39,7 @@ export const createTrending = (showitems) => {
     // generate movie item blocks
     showitems.forEach(showitem => {
         // get info from response
-        const { title, poster_path, vote_average, id } = showitem;
+        const { poster_path, vote_average, id } = showitem;
 
         const trendingItemBox = document.createElement('div');
 
@@ -64,7 +64,16 @@ export const createTrending = (showitems) => {
         const vote = parseInt(vote_average).toFixed(1);
 
         trendingItemImg.src = IMG_URL + poster_path;
-        trendingItemTitle.textContent = title;
+
+        // check if title, name, original_name are in swowitem
+        if (showitem.title) {
+            trendingItemTitle.textContent = showitem.title;
+        } else if (showitem.name) {
+            trendingItemTitle.textContent = showitem.name;
+        } else if (showitem.original_name) {
+            trendingItemTitle.textContent = showitem.original_name;
+        }
+
         trendingItemVote.textContent = vote;
 
 

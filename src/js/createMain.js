@@ -1,4 +1,5 @@
-import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from "./getShowsApi";
+import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from './getShowsApi';
+
 
 export const createMain = () => {
     const mainBlock = document.createElement('main');
