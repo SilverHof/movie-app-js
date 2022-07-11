@@ -1,4 +1,4 @@
-.top-rated {
+.popular{
 
     &__container {
 
@@ -14,7 +14,7 @@
     &__title {
         font-size: 30px;
         font-weight: 600;
-        color: rgba(25, 66, 41, 0.5);
+        color: rgba(255, 141, 2, 0.5);
     }
 
     &__items {
@@ -24,8 +24,8 @@
 
         padding: 30px;
         
-        background: rgba(25, 66, 41, 0.5);
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        background: rgba(255, 141, 2, 0.5);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 12.5px );
         -webkit-backdrop-filter: blur( 12.5px );
         border-radius: 15px;
@@ -64,11 +64,12 @@
     }
 
     &__item-data {
-        background-color: rgb(25, 66, 41);
+        background-color: rgb(255, 141, 2);
         padding: 2px 3px;
         font-size: 14px;
         font-weight: 600;
-        color: $white;    
+        color: $white;
+        
     }
 
     &__item-title {

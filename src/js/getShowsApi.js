@@ -1,13 +1,13 @@
+import { createPopular } from "./createPopular";
 import { createTopRated } from "./createTopRated";
+import { createTrending } from "./createTrending";
+import { createUpcoming } from "./createUpcoming";
+
 
 const API_KEY = `870bc8b39701543761f51393e7d7467f`;
-const moviename = `Transformers`;
-const showname = `sex education`;
-const name = `game of thrones`;
 
 
-
-export const getMultipleSearchApi = async () => {
+export const getMultipleSearchApi = async (name) => {
     // make a request
     try {
         const response = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=870bc8b39701543761f51393e7d7467f&language=en-US&query=${name}&page=1&include_adult=true`);
@@ -33,31 +33,15 @@ export const getTVShowsApi = async () => {
 }
 
 
-export const getUpcomingApi = async () => {
+export const getTrendingApi = async () => {
     // make a request
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=870bc8b39701543761f51393e7d7467f&language=en-US&page=1`);
+        const response = await fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}`);
         const parsedResponse = await response.json();
+
         console.log(parsedResponse.results);
         
-
-        // run a function to create a top rated block
-        createTopRated(parsedResponse.results);
-        
-    } catch(error) {
-        console.log(error);
-    }
-}
-
-
-export const getTopRatedApi = async () => {
-    // make a request
-    try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`);
-        const parsedResponse = await response.json();
-        console.log(parsedResponse.results);
-
-        createTopRated(parsedResponse.results)
+        createTrending(parsedResponse.results);
         
     } catch(error) {
         console.log(error);
@@ -72,7 +56,7 @@ export const getPopularApi = async () => {
         const parsedResponse = await response.json();
         console.log(parsedResponse.results);
 
-        // createTopRated(parsedResponse.results)
+        createPopular(parsedResponse.results);
         
     } catch(error) {
         console.log(error);
@@ -80,12 +64,31 @@ export const getPopularApi = async () => {
 }
 
 
-export const getTrendingApi = async () => {
+export const getUpcomingApi = async () => {
     // make a request
     try {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`);
         const parsedResponse = await response.json();
         console.log(parsedResponse.results);
+        
+
+        // run a function to create a top rated block
+        createUpcoming(parsedResponse.results);
+        
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+
+export const getTopRatedApi = async () => {
+    // make a request
+    try {
+        const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`);
+        const parsedResponse = await response.json();
+        console.log(parsedResponse.results);
+
+        createTopRated(parsedResponse.results);
         
     } catch(error) {
         console.log(error);

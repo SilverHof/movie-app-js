@@ -1,10 +1,13 @@
-import { getTopRatedApi, getUpcomingApi } from "./getShowsApi";
+import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from "./getShowsApi";
 
 export const createMain = () => {
     const mainBlock = document.createElement('main');
     mainBlock.classList.add('main');
 
-    // getUpcomingApi();
+
+    getTrendingApi();
+    getPopularApi();
+    getUpcomingApi();
     getTopRatedApi();
     
     const bodyBlock = document.querySelector('body');
