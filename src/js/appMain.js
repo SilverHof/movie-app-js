@@ -1,17 +1,16 @@
 import '../scss/main.scss';
 import '../html/index.html';
-import { getKeywordsSearchApi, getMovieSearchApi, getMultipleSearchApi, getTopRatedApi, getTVShowsApi } from './getShowsApi';
 import { createHeader } from './createHeader';
-import { createMainByHomeButton } from './createMainByHomeButton';
+import { createMain } from './createMain';
+import { getMultipleSearchApi, testApi } from './getShowsApi';
+
 
 
 const appMain = () => {
     createHeader();
-    createMainByHomeButton();
+    createMain();
     getMultipleSearchApi();
-    // getTopRatedApi();
-    // getMovieSearchApi();
-    // getTVShowsApi();
+    // testApi();
 }
 
 

@@ -14,3 +14,51 @@ body {
 .active {
     color: rgb(185, 0, 0);
 }
+
+.red-vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    background-color: rgb(179, 15, 15);
+    border-radius: 50%;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.yellow-vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    background-color: rgb(255, 162, 0);
+    border-radius: 50%;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.green-vote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    background-color: rgb(24, 88, 24);
+    border-radius: 50%;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+}
