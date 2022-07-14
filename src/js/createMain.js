@@ -4,7 +4,7 @@ import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from '.
 export const createMain = () => {
     const mainBlock = document.createElement('main');
     mainBlock.classList.add('main');
-
+    mainBlock.innerHTML = ``;
 
     getTrendingApi();
     getPopularApi();

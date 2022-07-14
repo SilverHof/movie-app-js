@@ -1,4 +1,7 @@
-export const createTrending = (showitems) => {
+import { delegateEvents } from '../delegateEvents';
+
+
+export const createTrendingSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
 
@@ -16,7 +19,7 @@ export const createTrending = (showitems) => {
     trendingContainer.classList.add('trending__container', 'container');
     trendingInner.classList.add('trending__inner');
     trendingTitle.classList.add('trending__title');
-    trendingItems.classList.add('trending__items');
+    trendingItems.classList.add('trending__items', 'items-list');
 
 
     // add info to elements
@@ -51,7 +54,7 @@ export const createTrending = (showitems) => {
 
 
         // add classes to top rated item
-        trendingItemBox.classList.add('trending__item-box');
+        trendingItemBox.classList.add('trending__item-box', 'item-box');
 
         trendingItemImg.classList.add('trending__item-img');
 
@@ -60,12 +63,19 @@ export const createTrending = (showitems) => {
         trendingItemVote.classList.add('trending__item-vote');
 
 
-        // add info to top rated items
-        const vote = parseInt(vote_average).toFixed(1);
+        // add data attribute to item box
+        trendingItemBox.id = id;
+        trendingItemImg.id = id;
 
+        trendingItemContent.id = id;
+        trendingItemTitle.id = id;
+        trendingItemVote.id = id;
+
+        // add info to top rated items
         trendingItemImg.src = IMG_URL + poster_path;
 
-        // check if title, name, original_name are in swowitem
+
+        // check if title, name, original_name are in showitem
         if (showitem.title) {
             trendingItemTitle.textContent = showitem.title;
         } else if (showitem.name) {
@@ -74,9 +84,13 @@ export const createTrending = (showitems) => {
             trendingItemTitle.textContent = showitem.original_name;
         }
 
+
+        // parse string to integer
+        const vote = parseInt(vote_average).toFixed(1);
         trendingItemVote.textContent = vote;
 
 
+        // check vote and add color
         if (vote > 7.5 && vote < 10) {
             trendingItemVote.classList.add('green-vote');
         } else if(vote > 5.5 && vote < 7.5) {
@@ -97,6 +111,8 @@ export const createTrending = (showitems) => {
             trendingItemVote
         );
     });
+
+    delegateEvents();
 
     
 

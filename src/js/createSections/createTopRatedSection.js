@@ -1,4 +1,7 @@
-export const createTopRated = (showitems) => {
+import { delegateEvents } from '../delegateEvents';
+
+
+export const createTopRatedSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
 
@@ -16,7 +19,7 @@ export const createTopRated = (showitems) => {
     topRatedContainer.classList.add('top-rated__container', 'container');
     topRatedInner.classList.add('top-rated__inner');
     topRatedTitle.classList.add('top-rated__title');
-    topRatedItems.classList.add('top-rated__items');
+    topRatedItems.classList.add('top-rated__items', 'items-list');
 
 
     // add info to elements
@@ -52,7 +55,7 @@ export const createTopRated = (showitems) => {
 
 
         // add classes to top rated item
-        topRatedItemBox.classList.add('top-rated__item-box');
+        topRatedItemBox.classList.add('top-rated__item-box', 'item-box');
 
         topRatedItemImg.classList.add('top-rated__item-img');
 
@@ -93,5 +96,6 @@ export const createTopRated = (showitems) => {
     });
 
     
+
 
 }

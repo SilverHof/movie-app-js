@@ -1,4 +1,7 @@
-export const createUpcoming = (showitems) => {
+import { delegateEvents } from '../delegateEvents';
+
+
+export const createUpcomingSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
 
@@ -16,7 +19,7 @@ export const createUpcoming = (showitems) => {
     upcomingContainer.classList.add('upcoming__container', 'container');
     upcomingInner.classList.add('upcoming__inner');
     upcomingTitle.classList.add('upcoming__title');
-    upcomingItems.classList.add('upcoming__items');
+    upcomingItems.classList.add('upcoming__items', 'items-list');
 
 
     // add info to elements
@@ -52,7 +55,7 @@ export const createUpcoming = (showitems) => {
 
 
         // add classes to top rated item
-        upcomingItemBox.classList.add('upcoming__item-box');
+        upcomingItemBox.classList.add('upcoming__item-box', 'item-box');
 
         upcomingItemImg.classList.add('upcoming__item-img');
 

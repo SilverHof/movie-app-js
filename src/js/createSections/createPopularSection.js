@@ -1,4 +1,7 @@
-export const createPopular = (showitems) => {
+import { delegateEvents } from '../delegateEvents';
+
+
+export const createPopularSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
 
@@ -16,7 +19,7 @@ export const createPopular = (showitems) => {
     popularContainer.classList.add('popular__container', 'container');
     popularInner.classList.add('popular__inner');
     popularTitle.classList.add('popular__title');
-    popularItems.classList.add('popular__items');
+    popularItems.classList.add('popular__items', 'items-list');
 
 
     // add info to elements
@@ -52,7 +55,7 @@ export const createPopular = (showitems) => {
 
 
         // add classes to top rated item
-        popularItemBox.classList.add('popular__item-box');
+        popularItemBox.classList.add('popular__item-box', 'item-box');
 
         popularItemImg.classList.add('popular__item-img');
 
@@ -91,7 +94,8 @@ export const createPopular = (showitems) => {
             popularItemVote
         );
     });
-
     
+
+
 
 }
