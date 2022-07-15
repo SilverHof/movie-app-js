@@ -143,5 +143,4 @@ export const createDetailsSection = (details, castItems) => {
         mainBlock.remove();
         createMain();
     }
-
 }

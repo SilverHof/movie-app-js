@@ -1,6 +1,3 @@
-import { delegateEvents } from '../addEvents';
-
-
 export const createTopRatedSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
@@ -103,8 +100,4 @@ export const createTopRatedSection = (showitems) => {
             topRatedItemVote
         );
     });
-
-    
-
-
 }

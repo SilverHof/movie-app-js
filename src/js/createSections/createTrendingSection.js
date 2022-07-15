@@ -1,6 +1,3 @@
-import { delegateEvents } from '../addEvents';
-
-
 export const createTrendingSection = (showitems) => {
     // get main block to fill by top rated block
     const mainBlock = document.querySelector('.main');
