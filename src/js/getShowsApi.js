@@ -68,6 +68,7 @@ export const getUpcomingApi = async () => {
 
         // run a function to create an upcoming section
         createUpcomingSection(parsedResponse.results);
+        console.log(parsedResponse.results);
         
     } catch(error) {
         console.log(error);

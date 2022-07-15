@@ -1,4 +1,4 @@
-import { delegateEvents } from '../delegateEvents';
+import { delegateEvents } from '../addEvents';
 
 
 export const createTrendingSection = (showitems) => {
@@ -93,7 +93,7 @@ export const createTrendingSection = (showitems) => {
         // check vote and add color
         if (vote > 7.5 && vote < 10) {
             trendingItemVote.classList.add('green-vote');
-        } else if(vote > 5.5 && vote < 7.5) {
+        } else if (vote > 5.5 && vote < 7.5) {
             trendingItemVote.classList.add('yellow-vote');
         } else {
             trendingItemVote.classList.add('red-vote');
@@ -111,9 +111,4 @@ export const createTrendingSection = (showitems) => {
             trendingItemVote
         );
     });
-
-    delegateEvents();
-
-    
-
 }

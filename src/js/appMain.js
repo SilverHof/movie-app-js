@@ -1,18 +1,16 @@
 import '../scss/main.scss';
 import '../html/index.html';
-import { createHeader } from './createHeader';
-import { createMain } from './createMain';
-import { getMultipleSearchApi, testApi } from './getShowsApi';
-import { delegateEvents } from './delegateEvents';
+import { createHeader } from './createBlocks/createHeader';
+import { createMain } from './createBlocks/createMain';
+import { getMultipleSearchApi } from './getShowsApi';
+import { generateMain } from './addEvents';
 
 
-
-const appMain = () => {
+const appMain = async () => {
     createHeader();
     createMain();
     getMultipleSearchApi();
-
-    // testApi();
+    generateMain();
 }
 
 

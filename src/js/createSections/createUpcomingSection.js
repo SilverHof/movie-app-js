@@ -1,4 +1,4 @@
-import { delegateEvents } from '../delegateEvents';
+import { delegateEvents } from '../addEvents';
 
 
 export const createUpcomingSection = (showitems) => {
@@ -63,6 +63,15 @@ export const createUpcomingSection = (showitems) => {
         upcomingItemData.classList.add('upcoming__item-data');
         upcomingItemTitle.classList.add('upcoming__item-title');
         upcomingItemVote.classList.add('upcoming__item-vote');
+
+
+        // add data attribute to item box
+        upcomingItemBox.id = id;
+        upcomingItemImg.id = id;
+
+        upcomingItemContent.id = id;
+        upcomingItemTitle.id = id;
+        upcomingItemVote.id = id;
 
 
         // add info to top rated items

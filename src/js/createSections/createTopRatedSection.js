@@ -1,4 +1,4 @@
-import { delegateEvents } from '../delegateEvents';
+import { delegateEvents } from '../addEvents';
 
 
 export const createTopRatedSection = (showitems) => {
@@ -63,6 +63,15 @@ export const createTopRatedSection = (showitems) => {
         topRatedItemData.classList.add('top-rated__item-data');
         topRatedItemTitle.classList.add('top-rated__item-title');
         topRatedItemVote.classList.add('top-rated__item-vote');
+
+
+        // add data attribute to item box
+        topRatedItemBox.id = id;
+        topRatedItemImg.id = id;
+
+        topRatedItemContent.id = id;
+        topRatedItemTitle.id = id;
+        topRatedItemVote.id = id;
 
 
         // add info to top rated items

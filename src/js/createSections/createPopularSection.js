@@ -1,4 +1,4 @@
-import { delegateEvents } from '../delegateEvents';
+import { delegateEvents } from '../addEvents';
 
 
 export const createPopularSection = (showitems) => {
@@ -63,6 +63,15 @@ export const createPopularSection = (showitems) => {
         popularItemData.classList.add('popular__item-data');
         popularItemTitle.classList.add('popular__item-title');
         popularItemVote.classList.add('popular__item-vote');
+
+
+        // add data attribute to item box
+        popularItemBox.id = id;
+        popularItemImg.id = id;
+
+        popularItemContent.id = id;
+        popularItemTitle.id = id;
+        popularItemVote.id = id;
 
 
         // add info to top rated items

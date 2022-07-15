@@ -1,4 +1,5 @@
-import { createMain } from "../createMain";
+import { createMain } from '../createBlocks/createMain';
+
 
 export const createDetailsSection = (details, castItems) => {
     // get main block and clear it

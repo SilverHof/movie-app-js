@@ -1,7 +1,13 @@
-import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from './getShowsApi';
+import { delegateEvents } from '../addEvents';
+import { getTrendingApi, getPopularApi, getUpcomingApi, getTopRatedApi } from '../getShowsApi';
 
 
 export const createMain = () => {
+    if(document.querySelector('.main')) {
+        document.querySelector('.main').remove();
+    }
+
+    
     const mainBlock = document.createElement('main');
     mainBlock.classList.add('main');
     mainBlock.innerHTML = ``;
@@ -11,6 +17,7 @@ export const createMain = () => {
     getUpcomingApi();
     getTopRatedApi();
     
+    setTimeout(delegateEvents, 1000);
     const bodyBlock = document.querySelector('body');
     bodyBlock.append(mainBlock);
 }
